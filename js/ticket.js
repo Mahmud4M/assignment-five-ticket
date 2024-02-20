@@ -1,15 +1,7 @@
 const seatAll = document.getElementsByClassName('seat-num');
 for (const seat of seatAll) {
-
-
-    for (let i = 0; i < seatAll.length; i++) {
-        seat.addEventListener('click', function() {
-            
-        })
-    }
-
     let count = 0;
-    let selectSeat = 40;
+    let selectSeat = 8;
     seat.addEventListener('click', function (e) {
         count = count + 1;
         selectSeat = selectSeat - 1;

@@ -1,5 +1,13 @@
 const seatAll = document.getElementsByClassName('seat-num');
 for (const seat of seatAll) {
+
+
+    for (let i = 0; i < seatAll.length; i++) {
+        seat.addEventListener('click', function() {
+            
+        })
+    }
+
     let count = 0;
     let selectSeat = 40;
     seat.addEventListener('click', function (e) {
@@ -7,18 +15,16 @@ for (const seat of seatAll) {
         selectSeat = selectSeat - 1;
         setInnerText('seat-selected', count);
         setInnerText('seat-left', selectSeat);
-
-        if (count >= 4) {
-            count = 0;
-        }
-
-
+        // if (count >= 4) {
+        //     count = 0;
+        // }
         //Ticket Datils
         const ticketDatils = document.getElementById('selected-seat-name');
 
         const ul = document.createElement('ul');
 
-        const seatName = e.target.parentNode.childNodes[1].innerText;
+        // const seatName = e.target.parentNode.childNodes[1].innerText;
+        const seatName = seat.innerText;
         const price = document.getElementById('price').innerText;
 
         const li = document.createElement('li');

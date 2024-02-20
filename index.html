@@ -197,9 +197,9 @@
                 <div class="pr-16 pl-7">
                     <!-- Select YOur Seat -->
                     <div>
-                        <h3 class="border-b-2 border-dotted border-[#818388] pb-5 text-xl font-bold">Select Your Seat
+                        <h3 class="border-b-2 border-dashed border-[#818388] pb-5 text-xl font-bold">Select Your Seat
                         </h3>
-                        <div class="flex justify-between border-b-2 border-dotted border-[#818388] pb-5">
+                        <div class="flex justify-between border-b-2 border-dashed border-[#818388] pb-5">
                             <div class="flex items-center gap-4 pt-5">
                                 <img src="images/seat-green.png" alt="">
                                 <p class="text-[#818388] font-inter font-medium">Available</p>
@@ -242,7 +242,7 @@
                                 class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">B3</button>
                             <button onclick="bgchangedEight()" id="seat-eight"
                                 class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">B4</button>
-                                <button
+                                <!-- <button
                                 class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">C</button>
                             <button
                                 class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">C1</button>
@@ -321,7 +321,7 @@
                             <button
                                 class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">J3</button>
                             <button
-                                class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">J4</button>
+                                class="seat-num btn px-6 bg-[#e5e6e7] text-[#818388] text-lg fonter-inter font-medium">J4</button> -->
 
                         </div>
 
@@ -330,14 +330,14 @@
                 </div>
 
                 <!-- Booked YOur Seat Start -->
-                <div class="p-5 border-l-2 border-black border-dotted pl-20">
+                <div class="p-5 border-l-2 border-black border-dashed pl-20">
                     <div>
-                        <h3 class="border-b-2 border-dotted border-[#818388] pb-5 text-xl font-bold">Select Your Seat
+                        <h3 class="border-b-2 border-dashed border-[#818388] pb-5 text-xl font-bold">Select Your Seat
                         </h3>
                     </div>
                     <!-- Price -->
                     <div class="bg-[#e5e6e7] mt-5 p-5 rounded-xl">
-                        <div class="flex gap-24 mt-5 border-b-2 border-dotted border-[#818388] pb-5">
+                        <div class="flex gap-24 mt-5 border-b-2 border-dashed border-[#818388] pb-5">
                             <p class="text-black text-lg font-inter font-medium">Seat <span id="seat-selected"
                                     class="bg-[#1dd100] text-green-700 px-4 py-1 rounded-lg text base">0</span></p>
                             <p class="text-black text-lg font-inter font-medium">class</p>
@@ -380,14 +380,14 @@
                                 </div>
                                 <div>
                                     <h5 class="text-black text-[15px] font-inter font-semibold">Phone Number*</h5>
-                                    <input class="p-3 rounded-xl mt-2" type="text" placeholder="Enter our Phone Number">
+                                    <input id="number" class="p-3 rounded-xl mt-2" type="text" placeholder="Enter our Phone Number">
                                 </div>
                                 <div>
                                     <h5 class="text-black text-[15px] font-inter font-semibold">Email Id</h5>
                                     <input class="p-3 rounded-xl mt-2" type="email" placeholder="Enter our Email Id">
                                 </div>
                                 <div>
-                                    <button onclick="messege()" class="btn w-full bg-[#1dd100] border-0">Next</button>
+                                    <button onclick="messege()" id="submit" disabled class="btn w-full bg-[#1dd100] border-0">Next</button>
                                 </div>
                                 <div class="flex justify-between">
                                     <a href="#"><u>Terms and Conditions</u></a>

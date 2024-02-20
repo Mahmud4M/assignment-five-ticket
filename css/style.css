@@ -16,3 +16,15 @@
 .text-sit{
     color: #030712;
 }
+
+ul{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 5px;
+}

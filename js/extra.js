@@ -1,10 +1,9 @@
-
 // Next button disabled
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const number = document.getElementById("number");
     const submit = document.getElementById("submit");
 
-    number.addEventListener("input", function() {
+    number.addEventListener("input", function () {
         if (number.value.trim() !== '' && isValidNumber(number.value) && number.value.trim() < 9999999999) {
             submit.disabled = false;
         } else {
@@ -16,8 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return !isNaN(value);
     }
 });
-
-
 
 
 // Modal
@@ -32,4 +29,3 @@ function messege() {
 function closeMessege() {
     popup.classList.add('hidden');
 }
-

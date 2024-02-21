@@ -2,7 +2,6 @@ const seatAll = document.getElementsByClassName('seat-num');
 for (const seat of seatAll) {
     seat.addEventListener('click', function (event) {
 
-
         // Count Selected sit && Leat Left
         const seatLeft = document.getElementById('seat-left').innerText;
         const count = document.getElementById('seat-selected').innerText;
@@ -11,19 +10,10 @@ for (const seat of seatAll) {
         document.getElementById('seat-selected').innerText = convertedCount + 1;
         document.getElementById('seat-left').innerText = convertedSeatLeft - 1;
 
-        if(convertedCount + 1 >+ 4 || convertedSeatLeft - 1 < 0) {
+        if (convertedCount + 1 > +4 || convertedSeatLeft - 1 < 0) {
             alert('You can not select more than 4');
             seat.setAttribute('disabled', true);
         }
-        
-        // count = count + 1;
-        // selectSeat = selectSeat - 1;
-        // setInnerText('seat-selected', count);
-        // setInnerText('seat-left', selectSeat);
-        // if (count >= 4) {
-        //     count = 0;
-        // }
-        //Ticket Datils
 
         // Only one time select one btn
         seat.setAttribute('disabled', false);
@@ -49,13 +39,9 @@ for (const seat of seatAll) {
         // Total Cost
         totalCost('total-cost', parseInt(price));
         //Grand Total
-        grandTotalCost('grand-total', parseInt(price))
-
-
-
+        grandTotalCost('grand-total', parseInt(price));
     })
 }
-
 
 
 // Total Cost

@@ -1,21 +1,35 @@
 const seatAll = document.getElementsByClassName('seat-num');
 for (const seat of seatAll) {
-    let count = 0;
-    let selectSeat = 8;
-    seat.addEventListener('click', function (e) {
-        count = count + 1;
-        selectSeat = selectSeat - 1;
-        setInnerText('seat-selected', count);
-        setInnerText('seat-left', selectSeat);
+    seat.addEventListener('click', function (event) {
+
+
+        // Count Selected sit && Leat Left
+        const seatLeft = document.getElementById('seat-left').innerText;
+        const count = document.getElementById('seat-selected').innerText;
+        const convertedCount = parseInt(count);
+        const convertedSeatLeft = parseInt(seatLeft);
+        document.getElementById('seat-selected').innerText = convertedCount + 1;
+        document.getElementById('seat-left').innerText = convertedSeatLeft - 1;
+
+        if(convertedCount + 1 >+ 4 || convertedSeatLeft - 1 < 0) {
+            alert('You can not select more than 4');
+            seat.setAttribute('disabled', true);
+        }
+        
+        // count = count + 1;
+        // selectSeat = selectSeat - 1;
+        // setInnerText('seat-selected', count);
+        // setInnerText('seat-left', selectSeat);
         // if (count >= 4) {
         //     count = 0;
         // }
         //Ticket Datils
+
+        // Only one time select one btn
+        seat.setAttribute('disabled', false);
+
         const ticketDatils = document.getElementById('selected-seat-name');
-
         const ul = document.createElement('ul');
-
-        // const seatName = e.target.parentNode.childNodes[1].innerText;
         const seatName = seat.innerText;
         const price = document.getElementById('price').innerText;
 
@@ -64,13 +78,11 @@ function grandTotalCost(category) {
     const couponTwo = 'Couple 20';
     const priceCouponOne = convertedGrandTotal - convertedGrandTotal * 0.15;
     const priceCouponTwo = convertedGrandTotal - convertedGrandTotal * 0.20;
-    if(code === couponOne){
+    if (code === couponOne) {
         setInnerText('grand-total', priceCouponOne);
-    }
-    else if(code === couponTwo){
+    } else if (code === couponTwo) {
         setInnerText('grand-total', priceCouponTwo);
-    }
-    else{
+    } else {
         setInnerText('grand-total', convertedGrandTotal);
     }
 }
